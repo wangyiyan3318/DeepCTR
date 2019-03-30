@@ -663,6 +663,7 @@ class DynamicGRU(Layer):
             self.gru_cell = tf.nn.rnn_cell.GRUCell(self.num_units)
 
         # Be sure to call this somewhere!
+
         super(DynamicGRU, self).build(input_shape)
 
     def call(self, input_list):

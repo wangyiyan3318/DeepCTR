@@ -220,4 +220,5 @@ def DIEN(feature_dim_dict, seq_feature_list, embedding_size=8, hist_len_max=16,
 
     if use_negsampling:
         model.add_loss(alpha * aux_loss_1)
+    tf.keras.backend.get_session().run(tf.global_variables_initializer())
     return model
